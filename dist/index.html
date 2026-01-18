@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Notes App - Aplikasi Pencatatan</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <script defer="defer" src="bundle.js"></script>
+  </head>
+  <body>
+    <app-bar title="Notes App"></app-bar><loading-indicator></loading-indicator>
+    <main class="container">
+      <section class="form-section">
+        <h2><i class="fas fa-plus-square"></i> Tambah Catatan Baru</h2>
+        <note-form></note-form>
+      </section>
+      <section class="notes-section">
+        <div class="notes-header">
+          <h2><i class="fas fa-sticky-note"></i> Catatan Aktif</h2>
+          <button class="toggle-btn" id="toggleArchived">Lihat Arsip</button>
+        </div>
+        <notes-list id="activeNotes" type="active"></notes-list>
+      </section>
+      <section class="notes-section archived-section" style="display: none">
+        <div class="notes-header">
+          <h2><i class="fas fa-archive"></i> Catatan Arsip</h2>
+          <button class="toggle-btn" id="toggleActive">Lihat Aktif</button>
+        </div>
+        <notes-list id="archivedNotes" type="archived"></notes-list>
+      </section>
+    </main>
+    <footer>&copy; 2026 Notes App Created By Emil Prayoga Albani.</footer>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
